@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#1f5a37">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}[hidden]{display:none!important}</style>
+<title>TRZ Flower Cost</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Layout: one-column phone tool — product tabs, live result card, grouped input lists */
+:root{
+  --bg:#f3f6f1; --surface:#ffffff; --line:#dbe3d6; --fg:#17251b; --muted:#5f6f63;
+  --leaf:#1f5a37; --marigold:#e8930c; --marigold-soft:#fdf0d9; --input:#fffbe8;
+  --display:"Bricolage Grotesque",system-ui,sans-serif;
+  --body:"IBM Plex Sans",system-ui,sans-serif;
+  --num:"IBM Plex Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0f1712; --surface:#18231c; --line:#2a3a2f; --fg:#e7efe8; --muted:#9aab9e;
+  --leaf:#7fd19c; --marigold:#f5a83a; --marigold-soft:#33260f; --input:#1f2a22; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f1712; --surface:#18231c; --line:#2a3a2f; --fg:#e7efe8; --muted:#9aab9e;
+  --leaf:#7fd19c; --marigold:#f5a83a; --marigold-soft:#33260f; --input:#1f2a22; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:15px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:16px 40px}
+.wrap{max-width:560px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
+header{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;flex-wrap:wrap}
+h1{font-family:var(--display);font-weight:800;font-size:1.6rem;margin:0;letter-spacing:-.01em;color:var(--leaf)}
+.rate{display:flex;align-items:center;gap:6px;font-size:.8rem;color:var(--muted)}
+.rate input{width:70px}
+.tabs{display:flex;gap:6px;overflow-x:auto;padding-bottom:4px;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:0 0 auto;border:1px solid var(--line);background:var(--surface);color:var(--fg);font:500 .85rem var(--body);
+  padding:8px 12px;border-radius:999px;cursor:pointer;white-space:nowrap}
+.tab[aria-selected="true"]{background:var(--leaf);border-color:var(--leaf);color:var(--bg)}
+.tab:focus-visible,input:focus-visible,button:focus-visible{outline:2px solid var(--marigold);outline-offset:2px}
+.result{background:var(--marigold-soft);border:1px solid var(--marigold);border-radius:14px;padding:14px 16px;display:grid;grid-template-columns:1fr auto;gap:4px 12px;align-items:end}
+.result .lbl{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.result .kd{font-family:var(--display);font-weight:800;font-size:2.6rem;line-height:1;color:var(--fg)}
+.result .kd small{font-size:1rem;font-weight:600;margin-left:4px}
+.result .inr{font-family:var(--num);font-size:1rem;text-align:right}
+.break{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px;padding-top:10px;border-top:1px dashed var(--marigold)}
+.break div{font-size:.72rem;color:var(--muted)}
+.break b{display:block;font-family:var(--num);font-weight:500;font-size:.9rem;color:var(--fg)}
+section{background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+section h2{font:600 .75rem var(--body);text-transform:uppercase;letter-spacing:.08em;color:var(--leaf);margin:0;padding:10px 14px;border-bottom:1px solid var(--line)}
+.row{display:grid;grid-template-columns:1fr auto;align-items:center;gap:10px;padding:8px 14px;border-bottom:1px solid var(--line)}
+.row:last-child{border-bottom:0}
+.row label{font-size:.9rem;min-width:0}
+.row label span{display:block;font-size:.72rem;color:var(--muted)}
+.row.zero label{color:var(--muted)}
+input{width:96px;font:500 1rem var(--num);text-align:right;padding:7px 8px;border:1px solid var(--line);border-radius:8px;background:var(--input);color:var(--fg);font-variant-numeric:tabular-nums}
+.pk{display:flex;align-items:center;gap:6px}
+.pk .x{font-size:.75rem;color:var(--muted);font-family:var(--num);min-width:62px;text-align:right}
+.pk input{width:70px}
+.foot{display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:.78rem;color:var(--muted)}
+.btn{border:1px solid var(--line);background:var(--surface);color:var(--fg);font:500 .82rem var(--body);padding:8px 12px;border-radius:8px;cursor:pointer}
+.confirm{display:flex;gap:6px;align-items:center}
+</style>
+</head><body>
+
+<div class="wrap">
+  <header>
+    <h1>TRZ Flower Cost</h1>
+    <div class="rate"><label for="kdrate">INR per 1 KD</label><input id="kdrate" type="number" inputmode="decimal" step="any"></div>
+  </header>
+  <nav class="tabs" id="tabs" role="tablist"></nav>
+  <div class="result" id="result"></div>
+  <div id="form" style="display:flex;flex-direction:column;gap:14px"></div>
+  <div class="foot">
+    <span id="saved">Your numbers are kept on this phone.</span>
+    <span id="resetbox"></span>
+  </div>
+</div>
+
+<script>
+const PACK=[["tc","TC 65 LIT",310],["carton","CARTON",130],["gel","GEL ICE",10],["cake","CAKE BOX",7],["bag","CARRY BAG",3],
+  ["bags","CARRY BAG (SMALL)",2],["tissue","TISSUE 10 PCS",1.5],["paper","PAPER 10 PCS",4.5],["tape","TAPE",15],["ftape","FLOWER TAPE",10],["thread","THREAD",7.5]];
+const P=(name,unit,o)=>({name,unit,...o});
+const DEFAULTS={
+  kdrate:309,
+  items:[
+    P("Malli Box","MLM",{flower:1200,per:20,kg:21,fr:210,kw:65,fsplit:310,cooli:1950,extra:50,psplit:310,sale:10,q:{tc:1,gel:18,cake:31,tissue:31,paper:12,tape:1,ftape:1,thread:30}}),
+    P("Mullai Box","MLM",{flower:450,per:28,kg:19,fr:210,kw:65,fsplit:310,cooli:2250,extra:50,psplit:310,sale:10,q:{tc:1,gel:18,cake:31,tissue:31,paper:12,tape:1,ftape:1,thread:30}}),
+    P("Sev+Rose TC","MLM",{flower:310,per:7,kg:21,fr:210,kw:65,fsplit:120,cooli:540,extra:50,psplit:310,sale:10,q:{tc:1,gel:18,bag:12,paper:6,tape:1,thread:18}}),
+    P("Sev+Rose Carton","MLM",{flower:320,per:7,kg:17,fr:210,kw:65,fsplit:100,cooli:300,extra:50,psplit:310,sale:10,q:{carton:1,gel:10,bag:10,paper:6,tape:1,thread:12}}),
+    P("Loose TC","KG",{flower:260,per:1,kg:24,fr:210,kw:65,fsplit:16,cooli:0,extra:50,psplit:310,sale:1,q:{tc:1,gel:18,bags:16,paper:6,tape:1,thread:18}}),
+    P("Loose Carton","KG",{flower:280,per:1,kg:13.5,fr:210,kw:65,fsplit:9,cooli:0,extra:50,psplit:310,sale:1,q:{carton:1,gel:10,bags:9,paper:6,tape:1,thread:12}}),
+  ],
+  quick:[
+    {name:"Quick Mullai",per:"box",rate:180,wt:2.1,frate:98,fwt:0.7,labour:140,other:40,kwt:30,factor:0.00373},
+    {name:"Quick Sevanthi",per:"bag",rate:80,wt:0.65,frate:98,fwt:1.3,labour:40,other:60,kwt:30,factor:0.00373},
+  ],
+  rates:Object.fromEntries(PACK.map(p=>[p[0],p[2]]))
+};
+const KEY="trz-flower-cost-v1";
+const clone=o=>JSON.parse(JSON.stringify(o));
+let S=clone(DEFAULTS);
+try{const s=JSON.parse(localStorage.getItem(KEY)||"null");if(s&&s.items)S=Object.assign(clone(DEFAULTS),s)}catch(e){}
+let tab=0;
+const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}};
+const n=v=>{const x=parseFloat(v);return isFinite(x)?x:0};
+const div=(a,b)=>b?a/b:0;
+const f2=v=>v.toLocaleString("en-US",{minimumFractionDigits:2,maximumFractionDigits:2});
+const f3=v=>v.toFixed(3);
+const TABS=[...DEFAULTS.items.map(i=>i.name),...DEFAULTS.quick.map(q=>q.name),"Packing Rates"];
+
+function calc(it){
+  const fl=div(n(it.flower),n(it.per));
+  const fr=div(n(it.kg)*(n(it.fr)+n(it.kw)),n(it.fsplit));
+  let pack=n(it.cooli)+n(it.extra);
+  PACK.forEach(([k])=>pack+=n(it.q[k]||0)*n(S.rates[k]));
+  const pk=div(pack,n(it.psplit));
+  const unit=fl+fr+pk, inr=unit*n(it.sale), kd=div(inr,n(S.kdrate));
+  return {fl,fr,pk,unit,inr,kd,pack};
+}
+function calcQ(q){const inr=div(n(q.rate),n(q.wt))+n(q.frate)*n(q.fwt)+div(n(q.labour),n(q.wt))+n(q.other)+n(q.kwt);return {inr,kd:inr*n(q.factor)}}
+
+function renderTabs(){
+  const t=document.getElementById("tabs");
+  t.innerHTML=TABS.map((x,i)=>`<button class="tab" role="tab" id="tab${i}" aria-selected="${i===tab}">${x}</button>`).join("");
+  t.querySelectorAll(".tab").forEach((b,i)=>b.onclick=()=>{tab=i;render()});
+}
+function renderResult(){
+  const r=document.getElementById("result");
+  const nI=S.items.length,nQ=S.quick.length;
+  if(tab<nI){const it=S.items[tab],c=calc(it);
+    const packLbl=it.unit==="KG"?"per KG":`box of ${n(it.sale)} MLM`;
+    r.hidden=false;
+    r.innerHTML=`<div><div class="lbl">Final cost · ${packLbl}</div><div class="kd">${f3(c.kd)}<small>KD</small></div></div>
+    <div class="inr">₹${f2(c.inr)}</div>
+    <div class="break"><div>Flower / ${it.unit}<b>₹${f2(c.fl)}</b></div><div>Freight / ${it.unit}<b>₹${f2(c.fr)}</b></div><div>Packing / ${it.unit}<b>₹${f2(c.pk)}</b></div></div>`;
+  }else if(tab<nI+nQ){const q=S.quick[tab-nI],c=calcQ(q);
+    r.hidden=false;
+    r.innerHTML=`<div><div class="lbl">Final cost · per ${q.per}</div><div class="kd">${f3(c.kd)}<small>KD</small></div></div><div class="inr">₹${f2(c.inr)}</div>`;
+  }else r.hidden=true;
+}
+const row=(id,label,val,sub)=>`<div class="row"><label for="${id}">${label}${sub?`<span>${sub}</span>`:""}</label><input id="${id}" type="number" inputmode="decimal" step="any" value="${val}"></div>`;
+
+function renderForm(){
+  const f=document.getElementById("form"),nI=S.items.length,nQ=S.quick.length;
+  if(tab<nI){const it=S.items[tab],u=it.unit;
+    f.innerHTML=`<section><h2>Flower</h2>
+      ${row("flower","Flower price per pack",it.flower,"INR")}
+      ${row("per",`${u} per pack`,it.per,u==="KG"?"Keep 1 for KG items":"How many MLM in one purchase pack")}
+      ${row("sale",u==="KG"?"Selling size (KG)":"MLM in selling box",it.sale)}</section>
+    <section><h2>Freight</h2>
+      ${row("kg","Freight weight","" + it.kg,"KG")}
+      ${row("fr","Freight rate per KG",it.fr,"INR")}
+      ${row("kw","Kuwait expense per KG",it.kw,"INR")}
+      ${row("fsplit",`Share freight over (${u})`,it.fsplit,`Total ${u} in this shipment`)}</section>
+    <section><h2>Packing · quantity</h2>
+      ${PACK.map(([k,l])=>{const q=it.q[k]||0;return `<div class="row${q?"":" zero"}"><label for="q_${k}">${l}<span>₹${S.rates[k]} each</span></label><div class="pk"><span class="x" id="x_${k}">₹${f2(q*n(S.rates[k]))}</span><input id="q_${k}" type="number" inputmode="decimal" step="any" value="${q}"></div></div>`}).join("")}
+      ${row("cooli","Cooli",it.cooli,"Total INR")}
+      ${row("extra","Extra",it.extra,"Total INR")}
+      ${row("psplit",`Share packing over (${u})`,it.psplit)}</section>`;
+    f.querySelectorAll("input").forEach(inp=>inp.oninput=()=>{
+      if(inp.id.startsWith("q_")){const k=inp.id.slice(2);it.q[k]=n(inp.value);
+        document.getElementById("x_"+k).textContent="₹"+f2(n(inp.value)*n(S.rates[k]));
+        inp.closest(".row").classList.toggle("zero",!n(inp.value));}
+      else it[inp.id]=inp.value;
+      save();renderResult();});
+  }else if(tab<nI+nQ){const q=S.quick[tab-nI];
+    f.innerHTML=`<section><h2>${q.name}</h2>
+      ${row("rate","Flower rate",q.rate,"INR")}${row("wt","Weight",q.wt,"KG")}
+      ${row("frate","Freight rate per KG",q.frate)}${row("fwt","Freight weight",q.fwt,"KG")}
+      ${row("labour","Labour",q.labour)}${row("other","Other (TC, ice)",q.other)}
+      ${row("kwt","Kuwait expense",q.kwt)}${row("factor","INR → KD factor",q.factor,"Multiply INR by this")}</section>`;
+    f.querySelectorAll("input").forEach(inp=>inp.oninput=()=>{q[inp.id]=inp.value;save();renderResult()});
+  }else{
+    f.innerHTML=`<section><h2>Packing rates (INR each)</h2>${PACK.map(([k,l])=>row("r_"+k,l,S.rates[k])).join("")}</section>`;
+    f.querySelectorAll("input").forEach(inp=>inp.oninput=()=>{S.rates[inp.id.slice(2)]=inp.value;save()});
+  }
+}
+function render(){renderTabs();renderResult();renderForm();resetUI(false)}
+function resetUI(ask){
+  const box=document.getElementById("resetbox");
+  if(!ask){box.innerHTML=`<button class="btn" id="reset">${tab<S.items.length+S.quick.length?"Reset this item":"Reset rates"}</button>`;
+    document.getElementById("reset").onclick=()=>resetUI(true);return;}
+  box.innerHTML=`<span class="confirm">Go back to sheet numbers? <button class="btn" id="yes">Yes</button><button class="btn" id="no">No</button></span>`;
+  document.getElementById("no").onclick=()=>resetUI(false);
+  document.getElementById("yes").onclick=()=>{const nI=S.items.length,nQ=S.quick.length;
+    if(tab<nI)S.items[tab]=clone(DEFAULTS.items[tab]);else if(tab<nI+nQ)S.quick[tab-nI]=clone(DEFAULTS.quick[tab-nI]);else S.rates=clone(DEFAULTS.rates);
+    save();render();};
+}
+const kr=document.getElementById("kdrate");kr.value=S.kdrate;
+kr.oninput=()=>{S.kdrate=kr.value;save();renderResult()};
+render();
+</script>
+
+<script>if("serviceWorker" in navigator){navigator.serviceWorker.register("sw.js").catch(()=>{})}</script>
+</body></html>
